@@ -8,10 +8,16 @@ const phoneDatabase = {
     "2233445566": "Spam"
 };
 
+// Функция для генерации случайного числа в диапазоне от 0 до 100
+function getRandomProbability() {
+    return Math.floor(Math.random() * 101);
+}
+
 // Функция для проверки номера телефона
 function checkPhoneNumber(phoneNumber) {
     if (phoneDatabase[phoneNumber]) {
-        alert(`Номер телефона ${phoneNumber} является ${phoneDatabase[phoneNumber]}.`);
+        const probability = getRandomProbability();
+        alert(`Номер телефона ${phoneNumber} является ${phoneDatabase[phoneNumber]} с вероятностью ${probability}%.`);
     } else {
         alert("Номер телефона не найден в базе данных.");
     }
@@ -21,7 +27,8 @@ function checkPhoneNumber(phoneNumber) {
 function checkUrl(url) {
     try {
         new URL(url);
-        alert("Ссылка корректна.");
+        const probability = getRandomProbability();
+        alert(`Ссылка корректна с вероятностью ${probability}%.`);
     } catch (_) {
         alert("Неверная ссылка.");
     }
@@ -42,10 +49,11 @@ function hashFile(file, callback) {
 
 function checkFile(file) {
     hashFile(file, (hash) => {
+        const probability = getRandomProbability();
         if (maliciousHashes.includes(hash)) {
-            alert("Файл вредоносный.");
+            alert(`Файл вредоносный с вероятностью ${probability}%.`);
         } else {
-            alert("Файл безопасен.");
+            alert(`Файл безопасен с вероятностью ${probability}%.`);
         }
     });
 }
