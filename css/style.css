@@ -1,0 +1,106 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(41, 41, 54);
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    color: yellow;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: orange;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Фотография перед секцией музыки */
+#hero img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: rgb(40, 40, 48);
+    padding: 10px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Стили для треков с обложками */
+.track {
+    background-color: rgb(77, 65, 65);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.track-cover {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: 2px solid yellow;
+}
+
+audio {
+    margin-top: 10px;
+}
+
+/* Галерея фотографий */
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.photo-gallery img {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    border-radius: 5px;
+    border: 2px solid yellow;
+}
+
+/* Дополнительные стили для акцентов */
+h2 {
+    color: orange;
+}
+
+h3 {
+    color: white;
+}
